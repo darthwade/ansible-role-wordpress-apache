@@ -1,0 +1,26 @@
+<VirtualHost *:80>
+	ServerAdmin {{wp_apache_admin_email}}
+	ServerName {{wp_apache_hostname}}
+	ServerAlias {{wp_apache_alias}}
+
+	DocumentRoot "{{wp_install_dir}}"
+
+	<Directory "{{wp_install_dir}}">
+		Options FollowSymLinks MultiViews Includes ExecCGI
+		AllowOverride none
+		Order allow,deny
+		allow from all
+		Require all granted
+		RewriteEngine On
+		RewriteBase /
+		RewriteRule ^index\.php$ - [L]
+		RewriteCond %{REQUEST_FILENAME} !-f
+		RewriteCond %{REQUEST_FILENAME} !-d
+		RewriteRule . /index.php [L]
+	</Directory>
+
+	ErrorLog /var/log/apache2/{{wp_apache_hostname}}-error.log
+	LogLevel warn
+	CustomLog /var/log/apache2/{{wp_apache_hostname}}-access.log combined
+
+</VirtualHost>

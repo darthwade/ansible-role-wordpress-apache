@@ -1,0 +1,7 @@
+---
+- name: WordPress | Apache | Copy virtual host configuration file
+  template: src=apache-vhost.conf.j2 dest=/etc/apache2/sites-available/{{wp_apache_hostname}}.conf owner=root group=root mode=0644
+
+- name: WordPress | Apache | Symlink virtual host configuration file from sites-available to sites-enabled
+  file: state=link src=/etc/apache2/sites-available/{{wp_apache_hostname}}.conf
+        dest=/etc/apache2/sites-enabled/{{wp_apache_hostname}}.conf owner=root group=root mode=0644

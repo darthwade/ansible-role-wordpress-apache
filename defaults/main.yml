@@ -1,0 +1,4 @@
+---
+wp_apache_hostname: 'example.com'
+wp_apache_alias: 'www.example.com cdn.example.com'
+wp_apache_admin_email: 'admin@example.com'

@@ -1,0 +1,14 @@
+---
+- hosts: all
+  vars:
+    wp_version: 4.0
+    wp_db_name: 'database_name_here'
+    wp_db_user: 'username_here'
+    wp_db_password: 'password_here'
+    wp_db_host: 'localhost'
+
+    wp_apache_hostname: 'localhost'
+    wp_apache_alias: 'localhost'
+    wp_apache_admin_email: 'admin@example.com'
+  roles:
+  - darthwade.wordpress-apache
