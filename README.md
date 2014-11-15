@@ -6,9 +6,10 @@
 Ansible role that installs and configures WordPress on Apache.
 
 Features include:
-- Installation of any wordpress-apache version to specified directory
+- Installation of any WordPress version to specified directory
 - Configuration of wp-config.php
 - Fetch random salts for wp-config.php (https://api.wordpress-apache.org/secret-key/1.1/salt/)
+- Configuration of Apache virtual host
 
 ## Installation
 
