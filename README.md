@@ -29,8 +29,8 @@ $ git clone https://github.com/darthwade/ansible-role-wordpress-apache.git
 
 ## Requirements & Dependencies
 - Ansible 1.4 or higher
-- PHP
-- Apache 2.4 or higher
+- PHP (I recommend `geerlingguy.php` role)
+- Apache 2.4 or higher (I recommend `geerlingguy.apache` role)
 - darthwade.wordpress
 
 ## Variables
