@@ -13,6 +13,8 @@
 		Require all granted
 		RewriteEngine On
 		RewriteBase /
+		RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+		RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 		RewriteRule ^index\.php$ - [L]
 		RewriteCond %{REQUEST_FILENAME} !-f
 		RewriteCond %{REQUEST_FILENAME} !-d
