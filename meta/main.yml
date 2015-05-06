@@ -1,6 +1,11 @@
 ---
 dependencies:
-  - darthwade.wordpress
+#  - { role: geerlingguy.phpmyadmin }
+##  - { role: geerlingguy.apache }
+##  - { role: geerlingguy.mysql }
+##  - { role: geerlingguy.php-mysql }
+##  - { role: geerlingguy.php }
+  - { role: darthwade.wordpress }
 
 galaxy_info:
   author: darthwade

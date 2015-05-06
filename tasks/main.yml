@@ -1,4 +1,5 @@
 ---
+
 - name: WordPress | Apache | Copy virtual host configuration file
   template: src=apache-vhost.conf.j2 dest=/etc/apache2/sites-available/{{wp_apache_hostname}}.conf owner=root group=root mode=0644
 
