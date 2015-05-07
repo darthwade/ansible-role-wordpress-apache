@@ -1,4 +1,4 @@
-<VirtualHost *:80>
+<VirtualHost *:{{wp_apache_listen_port}}>
 	ServerAdmin {{wp_apache_admin_email}}
 	ServerName {{wp_apache_hostname}}
 	ServerAlias {{wp_apache_alias}}
